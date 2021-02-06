@@ -1,6 +1,6 @@
 #!/bin/bash
 
-netconnect=$(ping -c 1 8.8.8.8 -I eth0 | grep packet | awk '{print $6}' | awk -F% '{print $1}') 
+netconnect=$(ping -c 1 8.8.8.8 | grep packet | awk '{print $6}' | awk -F% '{print $1}') 
 
 if [[ $netconnect == "0" ]]
 then
